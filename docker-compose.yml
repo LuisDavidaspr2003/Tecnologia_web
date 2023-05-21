@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  proyecto-web:   
+    container_name: proyecto-web  
+    image: proyecto-web:v1 
+    build:
+      context: .
+    ports:
+      - "4001:4001" 
+    networks:
+      - proyectoweb-app
+networks:
+  proyectoweb-app:
